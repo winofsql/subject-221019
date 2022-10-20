@@ -55,6 +55,12 @@ public class Main {
             print( string );
         }
 
+        print("--ForEach-");
+        listOk.forEach((s) ->  {
+            print(s);
+        });
+        
+
     }
 
     private static void print(String string) {
