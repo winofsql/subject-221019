@@ -10,13 +10,15 @@ public class Main {
         rpg.add("2:賢者");
         rpg.add("1:魔導士");
 
+        print("--List for-----");
+
         for (int i = 0; i < rpg.size(); i++) {
             print( rpg.get(i) );
         }
 
-        print("----------");
+        print("--List 拡張 for--");
 
-        for (String string : rpg) {
+        for (var string : rpg) {
             print( string );
         }
 
@@ -30,12 +32,12 @@ public class Main {
 
         print("--toArray--");
 
-        String[] skill = rpg.toArray(new String[0]);
+        var skill = rpg.toArray(new String[0]);
         for (int i = 0; i < skill.length; i++) {
             print(skill[i]);
         }
 
-        print("----------");
+        print("--配列拡張 for--");
 
         for (String string : skill) {
             print( string );
@@ -48,18 +50,23 @@ public class Main {
             print( string );
         }
 
-        print("--List化--");
+        print("--再List化--");
 
         List<String> listOk = new ArrayList<String>(list);
         for (String string : listOk) {
             print( string );
         }
 
-        print("--ForEach-");
+        print("--Array forEach ラムダ式-");
         listOk.forEach((s) ->  {
             print(s);
         });
-        
+
+        print("--List forEach-ラムダ式-");
+        rpg.forEach((s) -> {
+            print(s);
+        });
+
 
     }
 
